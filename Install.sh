@@ -116,12 +116,12 @@ install_banner "nmap & masscan parser"
 [[ -f $PLUGINS_PATH/nmap-stuff/nmaptocsv.py ]] || wget -q -O $PLUGINS_PATH/nmap-stuff/nmaptocsv.py https://raw.githubusercontent.com/maaaaz/nmaptocsv/master/nmaptocsv.py
 
 ##
-chmod +x osmedeus.py
-install_banner "Osmedeus dependencies"
+chmod +x BluePriar_Forensics .py
+install_banner "BluePriar_Forensics  dependencies"
 pip3 install -r requirements.txt
 cd $CWD
-mkdir -p ~/.osmedeus 2>/dev/null
-install_banner "Initial config for Osmedeus"
+mkdir -p ~/.BluePriar_Forensics 2>/dev/null
+install_banner "Initial config BluePriar_Forensics "
 python3 server/manage.py makemigrations
 python3 server/manage.py migrate
 python3 server/manage.py makemigrations api
@@ -166,6 +166,8 @@ cd $CWD
 ##
 # Install go stuff
 ##
+install_banner "datasploit"
+$GO_BIN get -ldflags "-s-w" -u github.com/OJ/datasploit
 install_banner "gobuster"
 $GO_BIN get -ldflags "-s -w" -u github.com/OJ/gobuster
 install_banner "aquatone"
