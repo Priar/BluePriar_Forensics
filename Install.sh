@@ -249,6 +249,9 @@ chmod +x $PLUGINS_PATH/findomain
 
 install_banner "truffleHog"
 pip3 install truffleHog
+install_banner "datasploit"
+pip3 install datasploit
+
 
 cd $PLUGINS_PATH
 
