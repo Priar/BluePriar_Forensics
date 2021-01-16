@@ -1,0 +1,9 @@
+https://www.absa.co.za/personal/
+https://nedbank.co.ls/content/nedbank-lesotho/desktop/lt/en/personal.html
+https://www.lpb.co.ls/
+https://www.wellsfargo.com/
+https://www.capitalone.com/
+https://www.capitecbank.co.za/
+https://www.africanbank.co.za/en/home/
+https://www.barclays.co.uk/
+https://www.fnb.co.za/
