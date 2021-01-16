@@ -167,7 +167,7 @@ cd $CWD
 # Install go stuff
 ##
 install_banner "datasploit"
-$GO_BIN get -ldflags "-s-w" -u github.com/OJ/datasploit
+$GO_BIN get -ldflags "-s -w" -u github.com/OJ/datasploit
 install_banner "gobuster"
 $GO_BIN get -ldflags "-s -w" -u github.com/OJ/gobuster
 install_banner "aquatone"
