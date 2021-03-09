@@ -1,0 +1,7 @@
+
+Hogan: 
+       POS Code: ZPS
+               : CURM
+                 : CUSV
+                   : ACPR
+                     :curp
